@@ -6,8 +6,26 @@ function FlightBooking() {
     const [departureDate, setDepartureDate]=useState(new Date().toISOString().split('T')[0])
     const [returnDate, setReturnDate]=useState(new Date().toISOString().split('T')[0])
     const [message,setMessage]=useState("");
-const handleSubmit=()=>{
+const handleSubmit=async (e)=>{
+    e.preventDefault();
 setMessage("you have booked flight");
+try{
+    const data={
+        flightType,departureDate, returnDate
+    }
+const response=await fetch("https://your-backend-url.com/api/submit-flight",{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify()
+})
+if(response.ok)
+{
+    const result=await response.json();
+}
+}
+catch(error){
+console.log(error)
+}
 }
   return (
     <div className="App">
