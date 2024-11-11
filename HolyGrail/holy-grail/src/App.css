@@ -1,0 +1,42 @@
+
+.nav{
+  text-align: center;
+  background-color: coral;
+  width: 100px;
+  padding: 12px;
+}
+.main{
+  text-align: center;
+  background-color: moccasin;
+  padding: 12px;
+  flex-grow: 1;
+}
+.aside{
+  text-align: center;
+  background-color: sandybrown;
+  padding: 12px;
+  width: 100px;
+}
+.columns{
+  display: flex;
+  flex-grow: 1;
+}
+.footer {
+  text-align: center;
+  background-color: slategray;
+  padding: 12px;
+  height: 60px;
+}
+.header{
+  text-align: center;
+  background-color: tomato;
+  padding: 12px;
+  height: 100px;
+
+}
+/* Main container to take full page height */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
