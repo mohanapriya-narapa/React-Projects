@@ -24,11 +24,13 @@ const fetchData = async (searchTerm) => {
     setLoading(true); // Show loading state
     try {
       // Await the Axios request to fetch data
-      const response = await axios.get('https://jsonplaceholder.typicode.com/users', {
-        params: { name_like: searchTerm }, // Pass searchTerm as a query parameter
-      });
+      // const response = await axios.get('https://jsonplaceholder.typicode.com/users', {
+      //   params: { name_like: searchTerm }, // Pass searchTerm as a query parameter
+      // });
+      const response =await fetch(`https://jsonplaceholder.typicode.com/users?name_like=${searchTerm}`)
+      const data=await response.json();
 
-      setResults(response.data); // Set the results from the API response
+      setResults(data);// Set the results from the API response
     } catch (error) {
       console.error('Error fetching data:', error);
     } finally {
