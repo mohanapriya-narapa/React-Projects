@@ -1,0 +1,23 @@
+.game{
+display:flex;
+flex-direction: column;
+align-items: center;
+gap:1rem;
+}
+.status{
+text-align: center;
+}
+.board{
+display: grid;
+grid-template-columns: repeat(3, 60px);
+}
+.cell{
+    width: 60px;
+    height: 60px;
+}
+.text-message-win{
+    color:green
+}
+.text-message{
+    color: red;
+}
