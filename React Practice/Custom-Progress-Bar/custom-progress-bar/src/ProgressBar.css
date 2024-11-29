@@ -1,0 +1,10 @@
+.bar{
+height:10px;
+width:250px;
+background-color: antiquewhite;
+
+}
+.bar-content{
+height: 100%;
+background-color: blue;
+}
