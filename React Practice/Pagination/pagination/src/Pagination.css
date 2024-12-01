@@ -1,0 +1,13 @@
+.grid{
+display: grid;
+/* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+gap:16px;
+max-width: 1200px;
+width: 100%;
+}
+.pagination{
+/* text-align: center; */
+display: flex;
+justify-content: center;
+gap:10px
+}
